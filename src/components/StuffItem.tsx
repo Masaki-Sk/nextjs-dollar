@@ -2,7 +2,7 @@ import { Stuff } from '@prisma/client';
 import Link from 'next/link';
 
 /* Renders a single row in the List Stuff table. See list/page.tsx. */
-const StuffItem = ({ name, quantity, condition, id }: Stuff) => (
+const StuffItem = ({ name, quantity, condition, id, value }: Stuff) => (
   <tr>
     <td>{name}</td>
     <td>{quantity}</td>
@@ -10,6 +10,7 @@ const StuffItem = ({ name, quantity, condition, id }: Stuff) => (
     <td>
       <Link href={`/edit/${id}`}>Edit</Link>
     </td>
+    <td>{value}</td>
   </tr>
 );
 
